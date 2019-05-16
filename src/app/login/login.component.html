@@ -1,0 +1,29 @@
+<ActionBar class="action-bar">
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<GridLayout columns="*" rows="*, 50, 50, 50, 50, *" class="page page-content">
+  <Label row="0" col="0" class="h1" text="Login" textWrap="true"></Label>
+  <Label row="1" col="0" class="p" text="Email" textWrap="true"></Label>
+  <TextField row="2" col="0" hint="Enter your email"
+    [text]='username | ""'
+    secure="false"
+    keyboardType="email"
+    returnKeyType="next"
+    (returnPress)="onEmailReturn($event)"
+    autocorrect="false"
+    class="input input-border"></TextField>
+
+  <Label row="1" col="0" class="p" text="Email" textWrap="true"></Label>
+  <TextField row="2" col="0" hint="Enter your email"
+      [text]='password | ""'
+      secure="true"
+      returnKeyType="done"
+      (returnPress)="onPasswordReturn($event)"
+      autocorrect="false"
+      class="input input-border"></TextField>
+</GridLayout>

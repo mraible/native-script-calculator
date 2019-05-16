@@ -1,0 +1,36 @@
+<ActionBar class="action-bar">
+    <NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
+    <ActionItem icon="res://navigation/menu" android:visibility="collapsed" (tap)="onDrawerButtonTap()"
+        ios.position="left">
+    </ActionItem>
+    <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+
+<GridLayout columns="*, *, *, *" rows="50, *, *, *, *, *, *" class="page page-content">
+    <Label row="0" col="0" colSpan="4" class="h1" text="Calculator" textWrap="true"></Label>
+    <Label row="1" col="0" colSpan="4" class="display" [text]="display" textWrap="false"></Label>
+
+    <Button row="2" col="0" class="btn btn-primary btn-orange" text="AC" (tap)="acPressed()"></Button>
+    <Button row="2" col="1" class="btn btn-primary btn-orange" text="CE" (tap)="cePressed()"></Button>
+    <Button row="2" col="2" class="btn btn-primary btn-grey" text="%" (tap)="percentPressed()"></Button>
+    <Button row="2" col="3" class="btn btn-primary btn-grey" text="/" (tap)="operatorPressed('/')"></Button>
+
+    <Button row="3" col="0" class="btn btn-primary btn-blue" text="7" (tap)="numberPressed('7')"></Button>
+    <Button row="3" col="1" class="btn btn-primary btn-blue" text="8" (tap)="numberPressed('8')"></Button>
+    <Button row="3" col="2" class="btn btn-primary btn-blue" text="9" (tap)="numberPressed('9')"></Button>
+    <Button row="3" col="3" class="btn btn-primary btn-grey" text="*" (tap)="operatorPressed('*')"></Button>
+
+    <Button row="4" col="0" class="btn btn-primary btn-blue" text="4" (tap)="numberPressed('4')"></Button>
+    <Button row="4" col="1" class="btn btn-primary btn-blue" text="5" (tap)="numberPressed('5')"></Button>
+    <Button row="4" col="2" class="btn btn-primary btn-blue" text="6" (tap)="numberPressed('6')"></Button>
+    <Button row="4" col="3" class="btn btn-primary btn-grey" text="-" (tap)="operatorPressed('-')"></Button>
+
+    <Button row="5" col="0" class="btn btn-primary btn-blue" text="1" (tap)="numberPressed('1')"></Button>
+    <Button row="5" col="1" class="btn btn-primary btn-blue" text="2" (tap)="numberPressed('2')"></Button>
+    <Button row="5" col="2" class="btn btn-primary btn-blue" text="3" (tap)="numberPressed('3')"></Button>
+    <Button row="5" col="3" rowSpan="2" class="btn btn-primary btn-grey" text="+" (tap)="operatorPressed('+')"></Button>
+
+    <Button row="6" col="0" class="btn btn-primary btn-blue" text="0" (tap)="numberPressed('0')"></Button>
+    <Button row="6" col="1" class="btn btn-primary btn-blue" text="." (tap)="numberPressed('.')"></Button>
+    <Button row="6" col="2" class="btn btn-primary btn-orange" text="=" (tap)="equalPressed()"></Button>
+</GridLayout>
