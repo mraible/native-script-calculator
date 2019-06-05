@@ -14,12 +14,12 @@ import { AppComponent } from "./app.component";
     imports: [
         AppRoutingModule,
         NativeScriptModule,
-        NativeScriptUISideDrawerModule
+        NativeScriptUISideDrawerModule,
         OAuthModule.forRoot(),
         HttpClientModule
     ],
     declarations: [
-        AppComponent,
+        AppComponent
     ],
     schemas: [
         NO_ERRORS_SCHEMA

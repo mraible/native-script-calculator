@@ -16,4 +16,4 @@ import { LoginComponent } from "./login.component";
         NO_ERRORS_SCHEMA
     ]
 })
-export class SearchModule { }
+export class LoginModule { }

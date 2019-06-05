@@ -7,7 +7,7 @@ import * as app from "tns-core-modules/application";
 @Component({
   selector: 'Login',
   moduleId: module.id,
-  templateUrl: 'login.html'
+  templateUrl: 'login.component.html'
 })
 export class LoginComponent {
   @ViewChild('email') email: any;
